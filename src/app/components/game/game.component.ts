@@ -23,6 +23,7 @@ import { HideShop } from "app/core/mods/hide-shop/hide-shop";
 import { KeyboardInput } from "app/core/mods/keyboard-input/keyboard-input";
 import { HttpClient } from '@angular/common/http';
 import { HideMount } from "app/core/mods/hide-mount/hide-mount";
+import { Mover } from "app/core/mods/mover/mover";
 
 
 @Component({
@@ -53,6 +54,7 @@ export class GameComponent implements AfterViewInit {
     private hideShop: HideShop;
     private keyboardInput: KeyboardInput;
     private hideMount: HideMount;
+    private mover: Mover;
 
     constructor(
         private windowService: WindowService,
@@ -132,6 +134,7 @@ export class GameComponent implements AfterViewInit {
                 if (this.hideShop) this.hideShop.reset();
                 if (this.keyboardInput) this.keyboardInput.reset();
                 if (this.hideMount) this.hideMount.reset();
+                if (this.mover) this.mover.reset();
         }
     }
 
@@ -174,6 +177,7 @@ export class GameComponent implements AfterViewInit {
                 this.rapidExchange = new RapidExchange(this.game.window);
                 //this.wizAssets = new WizAssetsContainer(this.game.window, this.applicationService, this.http, this.settingsService.option.general);
                 this.keyboardInput = new KeyboardInput(this.game.window);
+                this.mover = new Mover(this.game.window);
         }
     }
 
