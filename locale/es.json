@@ -201,7 +201,11 @@
         "diver": {
           "header": "Diverso",
           "end-turn": "Saltar su torno / Listo (combate)",
-          "open-chat": "Abrir el chat"
+          "open-chat": "Abrir el chat",
+          "goto_up_map": "Go to Upper Map",
+          "goto_bottom_map": "Go to Lower Map",
+          "goto_left_map": "Go to Left Map",
+          "goto_right_map": "Go to Right Map"
         },
         "interfaces": {
           "header": "Interfaces",

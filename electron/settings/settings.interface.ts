@@ -32,6 +32,10 @@ export interface SettingsInterface {
             diver: {
                 end_turn: string;
                 open_chat: string;
+                goto_up_map: string;
+                goto_bottom_map: string;
+                goto_left_map: string;
+                goto_right_map: string;
             }
             spell: Array<string>;
             item: Array<string>;

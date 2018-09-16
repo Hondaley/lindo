@@ -205,7 +205,11 @@
         "diver": {
           "header": "Miscellaneous",
           "end-turn": "End your turn / Ready (fight)",
-          "open-chat": "Open the chat"
+          "open-chat": "Open the chat",
+          "goto_up_map": "Go to Upper Map",
+          "goto_bottom_map": "Go to Lower Map",
+          "goto_left_map": "Go to Left Map",
+          "goto_right_map": "Go to Right Map"
         },
         "interfaces": {
           "header": "Interfaces",

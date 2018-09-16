@@ -419,6 +419,10 @@ export module Option {
         export class Diver {
             private _end_turn: string;
             private _open_chat: string;
+            private _goto_up_map: string;
+            private _goto_bottom_map: string;
+            private _goto_left_map: string;
+            private _goto_right_map: string;
 
             get end_turn(): string {
                 return this._end_turn;
@@ -438,9 +442,49 @@ export module Option {
                 this._open_chat = open_chat;
             }
 
+            get goto_up_map(): string {
+                return this._goto_up_map;
+            }
+
+            set goto_up_map(goto_up_map: string) {
+                this.settingsProvider.write('option.shortcuts.diver.goto_up_map', goto_up_map);
+                this._goto_up_map = goto_up_map;
+            }
+
+            get goto_bottom_map(): string {
+                return this._goto_bottom_map;
+            }
+
+            set goto_bottom_map(goto_bottom_map: string) {
+                this.settingsProvider.write('option.shortcuts.diver.goto_bottom_map', goto_bottom_map);
+                this._goto_bottom_map = goto_bottom_map;
+            }
+
+            get goto_left_map(): string {
+                return this._goto_left_map;
+            }
+
+            set goto_left_map(goto_left_map: string) {
+                this.settingsProvider.write('option.shortcuts.diver.goto_left_map', goto_left_map);
+                this._goto_left_map = goto_left_map;
+            }
+
+            get goto_right_map(): string {
+                return this._goto_right_map;
+            }
+
+            set goto_right_map(goto_right_map: string) {
+                this.settingsProvider.write('option.shortcuts.diver.goto_right_map', goto_right_map);
+                this._goto_right_map = goto_right_map;
+            }
+
             constructor(private settingsProvider: SettingsProvider) {
                 this.end_turn = this.settingsProvider.read('option.shortcuts.diver.end_turn');
                 this.open_chat = this.settingsProvider.read('option.shortcuts.diver.open_chat');
+                this.goto_up_map = this.settingsProvider.read('option.shortcuts.diver.goto_up_map');
+                this.goto_bottom_map = this.settingsProvider.read('option.shortcuts.diver.goto_bottom_map');
+                this.goto_left_map = this.settingsProvider.read('option.shortcuts.diver.goto_left_map');
+                this.goto_right_map = this.settingsProvider.read('option.shortcuts.diver.goto_right_map');
             }
         }
     }
